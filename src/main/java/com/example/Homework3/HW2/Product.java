@@ -1,34 +1,41 @@
-package com.example.Homework3;
+package com.example.Homework3.HW2;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Products")
+@Table(
+        name = "Products"
+)
 public class Product {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY
+    )
     private Long id;
-
-    @Column(nullable = false)
+    @Column(
+            nullable = false
+    )
     private String name;
-
-    @Column(nullable = false)
+    @Column(
+            nullable = false
+    )
     private Double price;
-
-    @Column(length = 500)
+    @Column(
+            length = 500
+    )
     private String description;
-
-    @Column(length = 50)
+    @Column(
+            length = 50
+    )
     private String category;
 
-    public Product() {
-    }
-
-
-
     public Long getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(Long id) {
@@ -36,7 +43,7 @@ public class Product {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -44,7 +51,7 @@ public class Product {
     }
 
     public Double getPrice() {
-        return price;
+        return this.price;
     }
 
     public void setPrice(Double price) {
@@ -52,7 +59,7 @@ public class Product {
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -60,7 +67,7 @@ public class Product {
     }
 
     public String getCategory() {
-        return category;
+        return this.category;
     }
 
     public void setCategory(String category) {
